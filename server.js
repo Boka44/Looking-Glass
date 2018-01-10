@@ -1,6 +1,6 @@
 express = require('express');
 var path = require('path');
-
+var PORT = process.env.PORT || 2000;
 
 var home = require('./routes/home');
 var services = require('./routes/services');
@@ -26,6 +26,6 @@ app.use('/contact', contact);
 
 //app.use('/drinks', drinks);
 
-app.listen(2000, function() {
+app.listen(PORT, function() {
 	console.log('Live at Port 2000!')
 });
